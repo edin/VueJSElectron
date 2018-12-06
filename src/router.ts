@@ -1,41 +1,48 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import Home1 from './views/Home1.vue';
-import Home2 from './views/Home2.vue';
-import Home3 from './views/Home3.vue';
-import Home4 from './views/Home4.vue';
+import OpenGL from './views/OpenGL.vue';
+import Vuetify from './views/Vuetify.vue';
+import Binding from './views/Binding.vue';
+import TodoView from "./views/TodoView.vue";
+import TodoDetail from "./views/TodoDetail.vue";
+import Plot from "./views/Plot.vue";
+
 
 Vue.use(Router);
 
 export default new Router({
-    //mode: 'history',
     base: process.env.BASE_URL,
     routes: [
         {
             path: '/',
-            name: 'home',
-            component: Home,
+            name: 'binding',
+            component: Binding,
         },
         {
-            path: '/home1',
-            name: 'home1',
-            component: Home1,
+            path: '/plot',
+            name: 'plot',
+            component: Plot,
+        },        {
+            path: '/opengl',
+            name: 'opengl',
+            component: OpenGL,
         },
         {
-            path: '/home2',
-            name: 'home2',
-            component: Home2,
+            path: '/vuetify',
+            name: 'vuetify',
+            component: Vuetify,
         },
         {
-            path: '/home3',
-            name: 'home3',
-            component: Home3,
-        },
-        {
-            path: '/home4',
-            name: 'home4',
-            component: Home4,
+            path: "/todoview",
+            name: "todoview",
+            component: TodoView, 
+            children: [
+                {
+                    name: "todoitem",
+                    path: "todo/:id",
+                    component: TodoDetail
+                }
+            ]
         }
-    ],
+    ]
 });

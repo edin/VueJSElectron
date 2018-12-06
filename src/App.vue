@@ -32,16 +32,11 @@
                 </v-avatar>
             </v-btn>
         </v-toolbar>
-        <v-content>
-            <v-container fluid fill-height>
-                <v-layout justify-center >
-                    <router-view></router-view>
-                </v-layout>
-            </v-container>
+        <v-content style="margin:10px;">
+            <center>
+                <router-view></router-view>
+            </center>
         </v-content>
-        <v-btn fab bottom right color="pink" dark fixed @click="dialog = !dialog">
-            <v-icon>add</v-icon>
-        </v-btn>
     </v-app>
 </template>
 <script>
@@ -50,11 +45,11 @@ export default {
         dialog: false,
         drawer: true,
         items: [
-            { icon: "settings", text: "Settings",  name:"home", params: {} },
-            { icon: "settings", text: "Vuetify UI", name:"home1", params: {} },
-            { icon: "settings", text: "Large data set", name:"home2", params: {} },
-            { icon: "settings", text: "Settings3", name:"home3", params: {} },
-            { icon: "settings", text: "Settings4", name:"home4", params: {} },
+            { icon: "settings", text: "Binding",  name:"binding", params: {} },
+            { icon: "settings", text: "Plot",  name:"plot", params: {} },
+            { icon: "settings", text: "Todo",  name:"todoview", params: {} },
+            { icon: "settings", text: "Vuetify UI", name:"vuetify", params: {} },
+            { icon: "settings", text: "Open GL", name:"opengl", params: {} },
         ]
     }),
     props: {

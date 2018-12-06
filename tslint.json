@@ -1,7 +1,6 @@
 {
     "defaultSeverity": "warning",
     "extends": [
-        "tslint:recommended"
     ],
     "linterOptions": {
         "exclude": [
@@ -20,5 +19,6 @@
         "no-consecutive-blank-lines": false,
         "trailing-comma": false,
         "quotemark":false
+        
     }
 }
