@@ -1,20 +1,17 @@
 <template>
-  <div class="home">
+  <div class="home" style="max-width:500px">
     <h2>Plot</h2>
-     
-    <v-slider v-model="model.value"></v-slider>
-    <v-slider v-model="model.value"></v-slider>
+   
+    <v-btn @click="addParam()">Add</v-btn>
+
+    <v-slider v-model="speed"></v-slider>
+    <v-slider v-for="param in params" v-model="param.value"></v-slider>
 
     <h1>{{model.value}}</h1>
     <v-text-field v-model="model.value"></v-text-field>
     
-    <v-btn @click="model.inc()">Increment</v-btn>
-    <v-btn @click="model.dec()">Decrement</v-btn>
-    
+
     <div style="width:500px;overflow:hidden">
-        <svg style="height:250px"> 
-            <circle cx="150" cy="120" :r="model.value" fill="red"/>
-        </svg>
     </div>
   </div>
 </template>
@@ -30,10 +27,8 @@ export default class extends Vue {
     ];
 
     
-    get values() {
-
-        
-
+    addParam() {
+        this.params.push({value: 1});
     }
 
 }
