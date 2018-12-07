@@ -6,7 +6,7 @@ import Binding from './views/Binding.vue';
 import TodoView from "./views/TodoView.vue";
 import TodoDetail from "./views/TodoDetail.vue";
 import Plot from "./views/Plot.vue";
-
+import TodoLite from "./views/TodoLite.vue";
 
 Vue.use(Router);
 
@@ -33,9 +33,14 @@ export default new Router({
             component: Vuetify,
         },
         {
+            path: '/todolite',
+            name: 'todolite',
+            component: TodoLite,
+        },
+        {
             path: "/todoview",
             name: "todoview",
-            component: TodoView, 
+            component: TodoView,
             children: [
                 {
                     name: "todoitem",

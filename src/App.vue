@@ -48,6 +48,7 @@ export default {
             { icon: "settings", text: "Binding",  name:"binding", params: {} },
             { icon: "settings", text: "Plot",  name:"plot", params: {} },
             { icon: "settings", text: "Todo",  name:"todoview", params: {} },
+            { icon: "settings", text: "Todo Lite",  name:"todolite", params: {} },
             { icon: "settings", text: "Vuetify UI", name:"vuetify", params: {} },
             { icon: "settings", text: "Open GL", name:"opengl", params: {} },
         ]
